@@ -14,7 +14,22 @@ fn print_coin(coin: Coin) -> u8 {
         Coin::Quarter => 25,
     }
 }
+
+fn tester(x: Option<i32>) -> Option<i32> {
+    match x {
+    None => None,
+    Some(x) => Some(x+1),
+    }
+}
 fn main() {
     println!("Hello, world!");
     print_coin(Coin::Penny);
+
+    let l1 = Some(3);
+    let l2 = tester(l1);
+    println!("{:?}", l2 );
+    let n = tester(None);
+    println!("{:?}", n );
+
+
 }
